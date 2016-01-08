@@ -11,6 +11,7 @@ public class BowThing extends Item{
 	public ItemStack onItemRightClick(ItemStack itemStackIn, World worldIn, EntityPlayer playerIn) {
 		// TODO Auto-generated method stub
 		FlamingArrow f = new FlamingArrow(worldIn,playerIn,2.0F);
+		f.setVelocity(f.motionX*3, f.motionY*3, f.motionZ*3);
 		if(!worldIn.isRemote)
 		{
 		worldIn.spawnEntityInWorld(f);
