@@ -51,13 +51,14 @@ public class BlockBreaker extends Block{
 	@Override
 	public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
 		blockPos = pos;
-		System.out.println(blockPos);
-		System.out.println(blockPos.add(-1, 0, 0));
-//		System.out.println(world.getBlockState(blockPos.add(-1, 0, 0)).getBlock());
-		System.out.println(world.getBlockState(blockPos.add(-1, 0, 0)).getBlock().getMaterial());
+		world = worldIn;
+//		System.out.println(blockPos);
+//		System.out.println(blockPos.add(-1, 0, 0));
+//		System.out.println(worldIn.getBlockState(blockPos.add(-1, 0, 0)));
+//		System.out.println(world.getBlockState(blockPos.add(-1, 0, 0)).getBlock().getMaterial());
 		if(blockPos.add(-1, 0, 0) != null)
 		{
-		if(worldIn.getBlockState(blockPos.add(-1, 0, 0)).getBlock() != null)
+		if(worldIn.getBlockState(blockPos.add(-1, 0, 0)) != null)
 		{
 		if(world.getBlockState(blockPos.add(-1, 0, 0)).getBlock().getMaterial() != Material.air)
 		{
